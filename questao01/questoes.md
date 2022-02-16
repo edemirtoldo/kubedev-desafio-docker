@@ -18,7 +18,7 @@ Vamos criar o volume para não perder os dados em caso do container ser excluido
 docker volume create mongodb_vol
 ```
 
-O comando para criação do container do MongoDB.
+O comando para criação do container.
 
 ```bash
 docker container run -d \
