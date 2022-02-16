@@ -12,7 +12,7 @@ que não vai perder os dados caso o container seja excluido).
 
 ### MongoDB
 
-Vamos criar o volume para o MongoDB.
+Vamos criar o volume para não perder os dados em caso do container ser excluido.
 
 ```bash
 docker volume create mongodb_vol
