@@ -21,12 +21,5 @@ docker volume create mongodb_vol
 O comando para criação do container do MongoDB.
 
 ```bash
-docker container run -d \
-    --name mongodb \
-    --network mongodb_net \
-    -p 27017:27017 \
-    -v mongodb_vol:/data/db \
-    -e MONGO_INITDB_ROOT_USERNAME="mongouser" \
-    -e MONGO_INITDB_ROOT_PASSWORD="mongopwd" \
-    mongo:4.4.3
+docker container run -d -e MONGO_INITDB_ROOT_USERNAME=mongouser -e MONGO_INITDB_ROOT_PASSWORD=mongopwd -v mongodb_vol:/data/db -p 27017:27017 --name mongodb mongo:4.4.3
 ```
