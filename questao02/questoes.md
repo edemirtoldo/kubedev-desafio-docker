@@ -44,7 +44,7 @@ Executar o container do Mongo Express.
 ```bash
 docker container run -d \
     --name mongo-express \
-    --network mongo_net \
+    --network mongodb_net \
     -p 8081:8081 \
     -e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" \
     -e ME_CONFIG_BASICAUTH_USERNAME="" \
@@ -52,7 +52,10 @@ docker container run -d \
 " \
     mongo-express
 ```
+Link para acesso ao Mongo Express <http://localhost:8081/>
 
+Pagina do Mongo-Express
+![Alt ou título da imagem](/img/mongo-express.pngURL da imagem)
 
 ### MariaDB => phpmyadmin
 
