@@ -127,7 +127,7 @@ Criar a network para acesso da ferramenta administrativa especifica.
 docker network create postgres_net
 ```
 
-Executar o container do MariaDB.
+Executar o container do PostgreSQL.
 
 ```bash
 docker container run -d \
@@ -184,7 +184,7 @@ Pagina do PgAdmin
 
 ![pgadmin5](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin5.png)
 
-### Redis => Redis-commander 
+### Redis => Redis Commander 
 
 Criar o volume para não perder os dados em caso do container ser excluido.
 
@@ -221,7 +221,7 @@ docker container run -d \
 ```
 Link para acesso ao PgAdmin <http://localhost:8084/>
 
-Pagina do Redis-Commander
+Pagina do Redis Commander
 
 ![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/redis1.png)
 
