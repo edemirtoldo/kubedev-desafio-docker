@@ -14,7 +14,7 @@ um deles com a solução. (Não esquece de documentar no Readme).
 
 ### Conversão de Temperatura - NodeJS
 
-Link:<https://github.com/edemirtoldo/conversao-temperatura>
+- Link: <https://github.com/edemirtoldo/conversao-temperatura>
 
 ### Conversão de Distância - Python utilizando Flask
 
