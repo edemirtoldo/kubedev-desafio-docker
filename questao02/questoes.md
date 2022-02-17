@@ -221,11 +221,7 @@ docker container run -d \
 ```
 Link para acesso ao PgAdmin <http://localhost:8084/>
 
-Credenciais de login
-- Username: postgresuser@postgresuser.com
-- Passwork: postgrespwd
+Pagina do Redis-Commander
 
-Pagina do PgAdmin login
-
-![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin1.png)
+![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/redis1.png)
 
