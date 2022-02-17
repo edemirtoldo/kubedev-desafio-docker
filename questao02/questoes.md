@@ -98,6 +98,7 @@ docker container run -d \
 	phpmyadmin:5.1.3
 ```
 Link para acesso ao phpmyadmin <http://localhost:8082/>
+
 Credenciais de login
 - Servidor: mariadb
 - Usuário: root
@@ -153,13 +154,14 @@ docker container run -d \
 	dpage/pgadmin4:5.5
 ```
 Link para acesso ao PgAdmin <http://localhost:8083/>
+
 Credenciais de login
 - Username: postgresuser@postgresuser.com
 - Passwork: postgrespwd
 
 Pagina do PgAdmin login
 
-![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/phpmyadmin1.png)
+![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin1.png)
 
 Pagina do PgAdmin
 
