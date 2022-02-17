@@ -18,3 +18,8 @@ a criar a imagem)
 
 Faça um fork de cada projeto para o seu GitHub e depois me envia aqui embaixo cada
 um deles com a solução. (Não esquece de documentar no Readme).
+
+### Conversão de Temperatura - NodeJS
+### Conversão de Distância - Python utilizando Flask
+
+### Conversão de Peso - C# utilizando ASP.Net Core
