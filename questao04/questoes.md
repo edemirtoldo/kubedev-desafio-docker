@@ -56,4 +56,6 @@ Criando a aplicação com a linha de comando abaixo:
 docker-compose up -d
 ```
 
+Respositório Edemir com aplicação rotten-potatoes: 
+
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
