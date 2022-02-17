@@ -114,6 +114,56 @@ Pagina do phpmyadmin
 
 ### PostrgreSQL => Pgadmin 
 
+Criar o volume para não perder os dados em caso do container ser excluido.
+
+```bash
+docker volume create postgres_vol
+```
+
+Criar a network para acesso da ferramenta administrativa especifica.
+
+```bash
+docker network create postgres_net
+```
+
+Executar o container do MariaDB.
+
+```bash
+docker container run -d \
+	--name postgres \
+	--network postgres_net \
+	-p 5432:5432 \
+	-v postgres_vol:/var/lib/postgresql/data \
+	-e POSTGRES_USER="postgresuser" \
+	-e POSTGRES_PASSWORD="postgrespwd" \
+	postgres:9.6.24
+```
+
+Executar o container do PgAdmin.
+
+```bash
+docker container run -d \
+	--name pgadmin4 \
+	--network postgres_net \
+	-p 8083:80 \
+	-v pgadmin-data:/var/lib/pgadmin \
+	-e PGADMIN_DEFAULT_EMAIL="postgresuser@postgresuser.com" \
+	-e PGADMIN_DEFAULT_PASSWORD="postgrespwd" \
+	-e PGADMIN_LISTEN_PORT="80" \
+	dpage/pgadmin4:5.5
+```
+Link para acesso ao PgAdmin <http://localhost:8083/>
+Credenciais de login
+- Username: postgresuser@postgresuser.com
+- Passwork: postgrespwd
+
+Pagina do PgAdmin login
+
+![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/phpmyadmin1.png)
+
+Pagina do PgAdmin
+
+![pgadmin2](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/phpmyadmin2.png)
 
 
 ### Redis => Redis-commander 
