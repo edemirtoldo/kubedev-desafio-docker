@@ -60,42 +60,56 @@ Pagina do Mongo-Express
 
 ### MariaDB => phpmyadmin
 
-Vamos criar o volume para não perder os dados em caso do container ser excluido.
+Criar o volume para não perder os dados em caso do container ser excluido.
 
 ```bash
-
+docker volume create mariadb_vol
 ```
 
-O comando para criação do container.
+Criar a network para acesso da ferramenta administrativa especifica.
 
 ```bash
-
+docker network create mariadb_net
 ```
+
+Executar o container do Maria.
+
+```bash
+docker container run -d \
+	--name mariadb \
+	--network mariadb_net \
+	-p 3306:3306 \
+	-v mariadb_vol:/var/lib/mysql \
+	-e MARIADB_USER="mariadbuser" \
+	-e MARIADB_PASSWORD="mariadbpwd" \
+	-e MARIADB_ROOT_PASSWORD="mariadbpwdroot" \
+	mariadb:10.7.1
+```
+
+Executar o container do Mongo Express.
+
+```bash
+docker container run -d \
+    --name mongo-express \
+    --network mongodb_net \
+    -p 8081:8081 \
+    -e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" \
+    -e ME_CONFIG_BASICAUTH_USERNAME="" \
+    -e ME_CONFIG_MONGODB_URL="mongodb://mongouser:mongopwd@mongodb:27017/admin
+" \
+    mongo-express
+```
+Link para acesso ao phpmyadmin <http://localhost:8081/>
+
+Pagina do phpmyadmin
+
+![Mongo-Express](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
+
+
 
 ### PostrgreSQL => Pgadmin 
 
-Vamos criar o volume para não perder os dados em caso do container ser excluido.
 
-```bash
-
-```
-
-O comando para criação do container.
-
-```bash
-
-```
 
 ### Redis => Redis-commander 
 
-Vamos criar o volume para não perder os dados em caso do container ser excluido.
-
-```bash
-
-```
-
-O comando para criação do container.
-
-```bash
-
-```
