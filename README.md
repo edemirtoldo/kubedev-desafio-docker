@@ -10,4 +10,4 @@ Esse repositório apresenta o Desafio do Docker do curso Kubedev!
 
 
 
->Este Desafio de Docker faz parte do Curso [KubeDev](https://kubedev.io/).
+>Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
