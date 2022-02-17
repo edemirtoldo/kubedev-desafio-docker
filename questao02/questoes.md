@@ -12,23 +12,49 @@ PostgreSQL ⇒  Pgadmin <https://www.pgadmin.org/>
 
 Redis ⇒ Redis-commander <https://hub.docker.com/r/rediscommander/redis-commander>
 
-### MongoDB - Mongo Express
+### MongoDB => Mongo Express
 
-Vamos criar o volume para não perder os dados em caso do container ser excluido.
+Criar o volume para não perder os dados em caso do container ser excluido.
 
 ```bash
 docker volume create mongodb_vol
 ```
 
-
-
-O comando para criação do container.
+Criar a network para acesso da ferramenta administrativa especifica.
 
 ```bash
-
+docker network create mongodb_net
 ```
 
-### MariaDB - phpmyadmin
+Executar o container do MongoDB.
+
+```bash
+docker container run -d \
+    --name mongodb \
+    --network mongodb_net \
+    -p 27017:27017 \
+    -v mongodb_vol:/data/db \
+    -e MONGO_INITDB_ROOT_USERNAME="mongouser" \
+    -e MONGO_INITDB_ROOT_PASSWORD="mongopwd" \
+    mongo:4.4.3
+```
+
+Executar o container do Mongo Express.
+
+```bash
+docker container run -d \
+    --name mongo-express \
+    --network mongo_net \
+    -p 8081:8081 \
+    -e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" \
+    -e ME_CONFIG_BASICAUTH_USERNAME="" \
+    -e ME_CONFIG_MONGODB_URL="mongodb://mongouser:mongopwd@mongodb:27017/admin
+" \
+    mongo-express
+```
+
+
+### MariaDB => phpmyadmin
 
 Vamos criar o volume para não perder os dados em caso do container ser excluido.
 
@@ -42,7 +68,7 @@ O comando para criação do container.
 
 ```
 
-### PostrgreSQL
+### PostrgreSQL => Pgadmin 
 
 Vamos criar o volume para não perder os dados em caso do container ser excluido.
 
@@ -56,7 +82,7 @@ O comando para criação do container.
 
 ```
 
-### Redis
+### Redis => Redis-commander 
 
 Vamos criar o volume para não perder os dados em caso do container ser excluido.
 
