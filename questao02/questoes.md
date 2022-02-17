@@ -186,3 +186,46 @@ Pagina do PgAdmin
 
 ### Redis => Redis-commander 
 
+Criar o volume para não perder os dados em caso do container ser excluido.
+
+```bash
+docker volume create redis_vol
+```
+
+Criar a network para acesso da ferramenta administrativa especifica.
+
+```bash
+docker network create redis_net
+```
+
+Executar o container do Redis.
+
+```bash
+docker container run -d \
+	--name redis \
+	--network redis_net \
+	-p 6379:6379 \
+	-v redis_vol:/data \
+	redis:6.2.6
+```
+
+Executar o container do Redis-Commander.
+
+```bash
+docker container run -d \
+	--name redis-commander \
+	--network redis_net \
+	-p 8084:8081 \
+	-e REDIS_HOSTS=local:redis:6379 \
+	rediscommander/redis-commander:latest
+```
+Link para acesso ao PgAdmin <http://localhost:8084/>
+
+Credenciais de login
+- Username: postgresuser@postgresuser.com
+- Passwork: postgrespwd
+
+Pagina do PgAdmin login
+
+![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin1.png)
+
