@@ -55,7 +55,8 @@ docker container run -d \
 Link para acesso ao Mongo Express <http://localhost:8081/>
 
 Pagina do Mongo-Express
-![Alt ou título da imagem](/img/mongo-express.pngURL da imagem)
+
+![Alt ou título da imagem](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
 
 ### MariaDB => phpmyadmin
 
