@@ -98,11 +98,18 @@ docker container run -d \
 	phpmyadmin:5.1.3
 ```
 Link para acesso ao phpmyadmin <http://localhost:8082/>
+Credenciais de login
+- Servidor: mariadb
+- Usuário: root
+- Senha: mariadbpwdroot
+
+Pagina do phpmyadmin login
+
+![phpmyadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
 
 Pagina do phpmyadmin
 
-![Mongo-Express](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
-
+![phpmyadmin2](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
 
 
 ### PostrgreSQL => Pgadmin 
