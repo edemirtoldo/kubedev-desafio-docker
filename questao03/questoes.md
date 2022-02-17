@@ -23,3 +23,5 @@ um deles com a solução. (Não esquece de documentar no Readme).
 ### Conversão de Peso - C# utilizando ASP.Net Core
 
 - Link: <https://github.com/edemirtoldo/conversao-peso>
+
+>Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).

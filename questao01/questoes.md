@@ -88,3 +88,5 @@ docker container run -d \
 	-v redis_vol:/data \
 	redis:6.2.6
 ```
+
+>Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).

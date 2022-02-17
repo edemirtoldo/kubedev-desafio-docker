@@ -225,3 +225,4 @@ Pagina do Redis Commander
 
 ![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/redis1.png)
 
+>Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
