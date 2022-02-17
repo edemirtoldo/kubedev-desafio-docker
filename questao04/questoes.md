@@ -6,8 +6,54 @@ Agora que você já afiou o seu conhecimento sobre criação de imagens Docker, 
 
 - link da aplicação: <https://github.com/KubeDev/rotten-potatoes>
 
+## Docker Compose da aplicação rotten-potatoes.
+
+docker-compose.yaml
+
 ```bash
-tesste
+version: "3.8"
+
+networks:
+  rotten-potatoes_net:
+    driver: bridge
+
+volumes:
+  rotten-potatoes_vol:
+
+services:
+  app:
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+    networks:
+      - rotten-potatoes_net
+    environment:
+      MONGODB_DB: admin
+      MONGODB_HOST: db
+      MONGODB_PORT: 27017
+      MONGODB_USERNAME: mongouser
+      MONGODB_PASSWORD: mongopwd
+
+  db:
+    image: mongo:4.4.3
+    restart: always
+    networks:
+      - rotten-potatoes_net
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongouser
+      MONGO_INITDB_ROOT_PASSWORD: mongopwd
+    volumes:
+      - rotten-potatoes_vol:/data/db
+```
+
+Criando a aplicação com a linha de comando abaixo:
+
+```bash
+docker-compose up -d
 ```
 
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
