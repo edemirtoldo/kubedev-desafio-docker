@@ -164,18 +164,19 @@ Pagina do PgAdmin login
 ![pgadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin1.png)
 
 Clique em Add New Server
+
 Na aba General informe
-Name: postgres
+- Name: postgres
 
 ![pgadmin2](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin2.png)
 
 Na aba Connection informe
-Host name/address: postgres
-Port: 5432
-Maintenance database: postgres
-Username: postgresuser
-Password: postgrespwd 
-e clique no botão Save
+- Host name/address: postgres
+- Port: 5432
+- Maintenance database: postgres
+- Username: postgresuser
+- Password: postgrespwd 
+- e clique no botão Save
 
 ![pgadmin3](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/pgadmin3.png)
 
