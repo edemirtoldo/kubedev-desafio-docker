@@ -105,11 +105,11 @@ Credenciais de login
 
 Pagina do phpmyadmin login
 
-![phpmyadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
+![phpmyadmin1](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/phpmyadmin1.png)
 
 Pagina do phpmyadmin
 
-![phpmyadmin2](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/mongo-express.png)
+![phpmyadmin2](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/phpmyadmin2.png)
 
 
 ### PostrgreSQL => Pgadmin 
