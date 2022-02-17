@@ -72,7 +72,7 @@ Criar a network para acesso da ferramenta administrativa especifica.
 docker network create mariadb_net
 ```
 
-Executar o container do Maria.
+Executar o container do MariaDB.
 
 ```bash
 docker container run -d \
@@ -86,20 +86,18 @@ docker container run -d \
 	mariadb:10.7.1
 ```
 
-Executar o container do Mongo Express.
+Executar o container do phpmyadmin.
 
 ```bash
 docker container run -d \
-    --name mongo-express \
-    --network mongodb_net \
-    -p 8081:8081 \
-    -e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" \
-    -e ME_CONFIG_BASICAUTH_USERNAME="" \
-    -e ME_CONFIG_MONGODB_URL="mongodb://mongouser:mongopwd@mongodb:27017/admin
-" \
-    mongo-express
+	--name phpmyadmin \
+	--network mariadb_net \
+	-p 8082:80 \
+	-v mariadb_vol:/var/lib/mysql \
+	-e PMA_ARBITRARY="1" \
+	phpmyadmin:5.1.3
 ```
-Link para acesso ao phpmyadmin <http://localhost:8081/>
+Link para acesso ao phpmyadmin <http://localhost:8082/>
 
 Pagina do phpmyadmin
 
