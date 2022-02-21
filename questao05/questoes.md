@@ -50,4 +50,15 @@ services:
       - db_vol:/var/lib/mysql
 ```
 
+Comando docker compose para o WordPress
+
+```bash
+docker-compose up -d
+```
+Pagina do Wordpressadmin login
+
+![wordpress01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/wordpress01.png)
+
+
+
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
