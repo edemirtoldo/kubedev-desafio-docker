@@ -7,7 +7,7 @@ Chegou um cliente pra você que possui todas as suas aplicações em data center
 docker-compose.yaml
 
 ```bash
-version: '3.1'
+version: '3.8'
 
 volumes:
   wp_vol:
