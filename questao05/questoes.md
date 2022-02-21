@@ -55,6 +55,9 @@ Comando docker compose para o WordPress
 ```bash
 docker-compose up -d
 ```
+
+Link para acesso ao WordPress http://localhost:8080/
+
 Pagina do Wordpressadmin login
 
 ![wordpress01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/wordpress01.png)
