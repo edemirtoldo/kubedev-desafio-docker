@@ -58,10 +58,9 @@ docker-compose up -d
 
 Link para acesso ao WordPress http://localhost:8080/
 
-Pagina do Wordpressadmin login
+Pagina do WordPress login
 
 ![wordpress01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/wordpress01.png)
-
 
 
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
