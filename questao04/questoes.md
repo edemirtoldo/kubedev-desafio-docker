@@ -11,7 +11,7 @@ Agora que você já afiou o seu conhecimento sobre criação de imagens Docker, 
 docker-compose.yaml
 
 ```bash
-version: "3.8"
+vversion: "3.8"
 
 networks:
   rotten-potatoes_net:
@@ -22,7 +22,10 @@ volumes:
 
 services:
   app:
-    build: .
+    image: edemirtoldo/rotten-potatoes:${TAG}
+    build:
+      dockerfile: ./Dockerfile
+      context: ./src
     ports:
       - 5000:5000
     depends_on:
