@@ -215,7 +215,15 @@ Pagina do Rotten-Potatoes-MS
 
 ![rotten01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/rotten01.png)
 
-Para a aplicação em execução:
+Basta rolar a pagina e clicar em um filme para fazer o cadastro de sua resenha.
+
+![rotten02](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/rotten02.png)
+
+Cadstrando a resenha do filme. 
+
+![rotten03](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/rotten03.png)
+
+Parando a aplicação em execução:
 
 ```bash
 docker-compose down
