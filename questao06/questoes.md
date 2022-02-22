@@ -14,6 +14,18 @@ Essa aplicação é formada por 3 repositórios:
 
 
 ## Resposta - Questão 06
+## Rotten Potatoes com Microserviços
+
+Aplicação escrita em python com filmes com a opção de cadastrar resenhas de cada filme.
+
+## Estrutura do projeto
+
+Esse projeto é baseado em uma aquitetura de Microsserviços e depende de outros 2 projetos pra funcionar
+
+segue abaixo o diagrama:
+
+![diagrama](https://github.com/edemirtoldo/rotten-potatoes-ms/blob/main/img/diagrama.png)
+
 
 ```bash
 
