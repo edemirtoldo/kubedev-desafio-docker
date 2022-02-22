@@ -32,26 +32,54 @@ Segue abaixo o diagrama:
 
 ![diagrama](https://github.com/edemirtoldo/rotten-potatoes-ms/blob/main/img/diagrama.png)
 
-##Configuração
+## Configuração
 
 Foram criados 3 Dockerfile um para cada aplicação
 
 Dockerfile - Rotten-Potatoes-MS
 
 ```bash
-
+FROM python:3.8-slim-buster
+WORKDIR /app
+COPY requirements.txt /app
+RUN python -m pip install -r requirements.txt
+COPY . .
+EXPOSE 5000
+CMD ["gunicorn", "--workers=3", "--bind", "0.0.0.0:5000", "app:app"]
 ```
 
 Dockerfile - Movies
 
 ```bash
-
+FROM node:16-alpine
+EXPOSE 8181
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install
+COPY . .
+ENTRYPOINT [ "node", "server.js" ]
 ```
 
-Dockerfile - Review
+Dockerfile - Review - local: /review/src/Review.Web
 
 ```bash
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+EXPOSE 80
 
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+COPY Review.Web.csproj /src/.
+RUN dotnet restore Review.Web.csproj
+COPY . .
+RUN dotnet build Review.Web.csproj -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish Review.Web.csproj -c Release -o /app/publish
+
+FROM base AS Final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT [ "dotnet", "Review.Web.dll" ]
 ```
 
 
