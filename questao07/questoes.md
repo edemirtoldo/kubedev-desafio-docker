@@ -11,7 +11,7 @@ me marcar e colocar a nossa #rumoaelite !!!!
 
 ## Resposta
 
-Link do repositorio no GitHub (https://github.com/edemirtoldo/kubedev-desafio-docker)
+Link do repositório no GitHub com o Desafio de Docker (https://github.com/edemirtoldo/kubedev-desafio-docker)
 
 
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
