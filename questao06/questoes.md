@@ -213,7 +213,7 @@ Para acessar a aplicação basta acessar este Link: (http://localhost:8080)
 
 Pagina do Rotten-Potatoes-MS 
 
-![wordpress01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/wordpress01.png)
+![rotten01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/rotten01.png)
 
 Para a aplicação em execução:
 
