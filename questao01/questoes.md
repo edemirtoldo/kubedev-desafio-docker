@@ -10,6 +10,8 @@ que não vai perder os dados caso o container seja excluido).
 - PostgreSQL
 - Redis
 
+## Respostas 
+
 ### MongoDB
 
 Vamos criar o volume para não perder os dados em caso do container ser excluido.
