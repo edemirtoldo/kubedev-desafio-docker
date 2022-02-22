@@ -229,16 +229,4 @@ Parando a aplicação em execução:
 docker-compose down
 ```
 
-
-
-
-
-
-
-```bash
-
-```
-
-
-
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
