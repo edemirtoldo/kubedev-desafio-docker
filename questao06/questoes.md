@@ -14,6 +14,7 @@ Essa aplicação é formada por 3 repositórios:
 
 
 ## Resposta - Questão 06
+
 ## Rotten Potatoes com Microserviços
 
 Aplicação escrita em python com filmes com a opção de cadastrar resenhas de cada filme.
