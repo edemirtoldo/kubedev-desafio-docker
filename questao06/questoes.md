@@ -1,5 +1,6 @@
 # Kubedev - Desafio de Docker
 
+
 ## Questão 06
 
 Agora vamos aumentar mais a complexidade das coisas, chegou a hora de executar
@@ -21,7 +22,7 @@ Essa aplicação é formada por 3 repositórios:
 Link para acesso a aplicação de Filmes (http://localhost:8080)
 
 ```bash
-http://localhost:8080
+
 ```
 
 
