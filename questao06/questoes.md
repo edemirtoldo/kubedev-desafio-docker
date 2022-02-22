@@ -82,6 +82,115 @@ COPY --from=publish /app/publish .
 ENTRYPOINT [ "dotnet", "Review.Web.dll" ]
 ```
 
+## Fazendo o Deploy da Aplicação.
+
+Utilizaremos o docker-compose.yaml para que em apenas um unico comando possamos fazer a instalação da aplicação no container docker.
+
+docker-compose.yaml
+
+```bash
+version: "3.8"
+
+volumes:
+  postgres_data:
+  mongo_vol:
+
+networks:
+  net_app:
+    driver: bridge
+  net_db:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:13.4-alpine
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - net_db
+    ports:
+      - "5432:5432"
+
+  mongodb:
+
+    image: mongo:5.0
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PWD}
+    volumes:
+      - mongo_vol:/data/db
+    networks:
+        - net_db
+    ports:
+      - "27017:27017"
+
+  app-rotten-potatoes:
+    image: edemirtoldo/rotten_potatoes_ms:${TAG}
+    hostname: app-rotten-potatoes
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    environment:
+      - MOVIE_SERVICE_URI=${MOVIE_SERVICE_URI}
+      - REVIEW_SERVICE_URI=${REVIEW_SERVICE_URI}
+    depends_on:
+      - app-review
+      - app-movie
+    networks:
+      - net_app
+    ports:
+      - "8080:5000"
+  
+  app-review:
+    image: edemirtoldo/review:${TAG}
+    hostname: app-review
+    build:
+      context: ../review/src/Review.Web/
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__MyConnection=${CONNECTION_STRING_PG}
+    networks:
+      - net_db
+      - net_app
+    restart: always
+    depends_on:
+      - postgres
+
+  app-movie:
+    image: edemirtoldo/movie:${TAG}
+    hostname: app-movie
+    build:
+      context: ../movie/src/
+      dockerfile: Dockerfile
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+    networks:
+      - net_db
+      - net_app
+    restart: always
+    depends_on:
+      - mongodb
+
+```
+Utilizamos o arquivo .env para incluir variaveis no arquivo docker-compose.
+
+.env
+
+```bash
+TAG=v1
+MOVIE_SERVICE_URI=http://app-movie:8181
+REVIEW_SERVICE_URI=http://app-review:80
+CONNECTION_STRING_PG="Host=postgres;Database=pguser;Username=pguser;Password=Pg@123"
+MONGODB_URI=mongodb://mongouser:mongopwd@mongodb:27017/admin
+MONGO_USER=mongouser
+MONGO_PWD=mongopwd
+PG_USER=pguser
+PG_PASSWD=Pg@123
+```
+
 
 
 Link para acesso a aplicação de Filmes (http://localhost:8080)
