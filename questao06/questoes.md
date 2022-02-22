@@ -34,9 +34,9 @@ Segue abaixo o diagrama:
 
 ## Configuração
 
-Foram criados 3 Dockerfile um para cada aplicação
+Foram criados 3 Dockerfile para criação da imagens docker.
 
-Dockerfile - Rotten-Potatoes-MS
+Dockerfile - Rotten-Potatoes-MS - local: ./rotten-potatoes-ms/src/
 
 ```bash
 FROM python:3.8-slim-buster
@@ -48,7 +48,7 @@ EXPOSE 5000
 CMD ["gunicorn", "--workers=3", "--bind", "0.0.0.0:5000", "app:app"]
 ```
 
-Dockerfile - Movies
+Dockerfile - Movies - local: ./movie/src/
 
 ```bash
 FROM node:16-alpine
@@ -60,7 +60,7 @@ COPY . .
 ENTRYPOINT [ "node", "server.js" ]
 ```
 
-Dockerfile - Review - local: /review/src/Review.Web
+Dockerfile - Review - local: ./review/src/Review.Web
 
 ```bash
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
