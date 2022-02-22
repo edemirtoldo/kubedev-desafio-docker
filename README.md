@@ -9,5 +9,6 @@ Esse repositório apresenta o Desafio do Docker do curso Kubedev!
 - [Questão 04](questao04/questoes.md)
 - [Questão 05](questao05/questoes.md)
 - [Questão 06](questao06/questoes.md)
+- [Questão 07](questao07/questoes.md)
 
 >Este Desafio de Docker faz parte do Curso [KubeDev.io](https://kubedev.io/).
