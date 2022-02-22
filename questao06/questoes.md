@@ -25,9 +25,9 @@ Esse projeto é baseado em uma aquitetura de Microsserviços e depende de outros
 
 Que são:
 
-[Microserviço Reviews](https://github.com/edemirtoldo/review/) - Onde são armazenados os dados de resenha dos filmes apresentados pela aplicação que utiliza PostGresSQL como banco de dados.
+[Microserviço Reviews](https://github.com/edemirtoldo/review/) - Onde são armazenados os dados de resenha dos filmes apresentados pela aplicação que utiliza **PostGresSQL** como banco de dados.
 
-[Microserviço Movies](https://github.com/edemirtoldo/movie) - Onde estão cadastrados os filmes exibidos no site da aplicação que utiliza MongoDB como banco de dados.
+[Microserviço Movies](https://github.com/edemirtoldo/movie) - Onde estão cadastrados os filmes exibidos no site da aplicação que utiliza **MongoDB** como banco de dados.
 
 Segue abaixo o diagrama:
 
