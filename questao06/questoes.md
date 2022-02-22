@@ -191,7 +191,7 @@ PG_PASSWD=Pg@123
 
 ## Fazendo o Deploy da Aplicação.
 
-Faça a clonagem do repositório da aplicação com o comando abaixo:
+Faça a clonagem dos 3 repositórios das aplicações com o comando abaixo:
 
 ```bash
 git clone https://github.com/edemirtoldo/rotten-potatoes-ms.git \
@@ -199,7 +199,7 @@ git clone https://github.com/edemirtoldo/rotten-potatoes-ms.git \
 	&& git clone https://github.com/edemirtoldo/review.git
 ```
 
-Acessar a pasta rotten-potatoes-ms e executar a linha de comando abaixo para fazer o build da aplicação e sua execução:
+Acessar a pasta /rotten-potatoes-ms e executar a linha de comando abaixo para fazer o build da aplicação e sua execução:
 
 ```bash
 docker compose up -d
