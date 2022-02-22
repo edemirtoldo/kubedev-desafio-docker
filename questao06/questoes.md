@@ -217,7 +217,7 @@ Pagina do Rotten-Potatoes-MS
 
 Basta rolar a pagina e clicar em um filme para fazer o cadastro de sua resenha.
 
-![rotten02](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/rotten02.png)
+![rotten02](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/rotten03.png)
 
 Cadstrando a resenha do filme. 
 
