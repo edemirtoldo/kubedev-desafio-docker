@@ -22,18 +22,39 @@ Aplicação escrita em python com filmes com a opção de cadastrar resenhas de 
 
 Esse projeto é baseado em uma aquitetura de Microsserviços e depende de outros 2 projetos pra funcionar.
 
-[Microserviço de Review](https://github.com/edemirtoldo/review/) - onde são armazenados os dados de resenha dos filmes apresentados pela aplicação que utiliza PostGresSQL como banco de dados.
+Que são:
 
-[Microserviço de Filmes](https://github.com/edemirtoldo/movie) - onde estão cadastrados os filmes exibidos no site da aplicação que utiliza MongoDB como banco de dados.
+[Microserviço Reviews](https://github.com/edemirtoldo/review/) - onde são armazenados os dados de resenha dos filmes apresentados pela aplicação que utiliza PostGresSQL como banco de dados.
+
+[Microserviço Movies](https://github.com/edemirtoldo/movie) - onde estão cadastrados os filmes exibidos no site da aplicação que utiliza MongoDB como banco de dados.
 
 Segue abaixo o diagrama:
 
 ![diagrama](https://github.com/edemirtoldo/rotten-potatoes-ms/blob/main/img/diagrama.png)
 
+##Configuração
+
+Foram criados 3 Dockerfile um para cada aplicação
+
+Dockerfile - Rotten-Potatoes-MS
 
 ```bash
 
 ```
+
+Dockerfile - Movies
+
+```bash
+
+```
+
+Dockerfile - Review
+
+```bash
+
+```
+
+
 
 Link para acesso a aplicação de Filmes (http://localhost:8080)
 
