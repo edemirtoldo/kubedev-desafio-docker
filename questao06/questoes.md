@@ -17,7 +17,7 @@ Essa aplicação é formada por 3 repositórios:
 
 ## Rotten Potatoes com Microserviços
 
-Aplicação escrita em python com filmes com a opção de cadastrar resenhas de cada filme.
+Aplicação escrita em **Python** com lista de filmes e opção de cadastrar resenhas.
 
 ## Estrutura do projeto
 
