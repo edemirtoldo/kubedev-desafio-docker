@@ -190,10 +190,28 @@ MONGO_PWD=mongopwd
 PG_USER=pguser
 PG_PASSWD=Pg@123
 ```
+Acessar a pasta rotten-potatoes-ms e executar a linha de comando abaixo para fazer o build da aplicação e sua execução:
+
+```bash
+docker compose up -d
+```
+apos o termino do Build e Deploy, para listar o container em execução:
+
+```bash
+docker container ls
+```
+Para acessar a aplicação basta acessar este Link: (http://localhost:8080)
+
+
+Para a aplicação em execução:
+
+```bash
+docker-compose down
+```
 
 
 
-Link para acesso a aplicação de Filmes (http://localhost:8080)
+
 
 
 
