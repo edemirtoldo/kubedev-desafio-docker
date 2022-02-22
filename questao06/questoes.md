@@ -24,9 +24,9 @@ Esse projeto é baseado em uma aquitetura de Microsserviços e depende de outros
 
 Que são:
 
-[Microserviço Reviews](https://github.com/edemirtoldo/review/) - onde são armazenados os dados de resenha dos filmes apresentados pela aplicação que utiliza PostGresSQL como banco de dados.
+[Microserviço Reviews](https://github.com/edemirtoldo/review/) - Onde são armazenados os dados de resenha dos filmes apresentados pela aplicação que utiliza PostGresSQL como banco de dados.
 
-[Microserviço Movies](https://github.com/edemirtoldo/movie) - onde estão cadastrados os filmes exibidos no site da aplicação que utiliza MongoDB como banco de dados.
+[Microserviço Movies](https://github.com/edemirtoldo/movie) - Onde estão cadastrados os filmes exibidos no site da aplicação que utiliza MongoDB como banco de dados.
 
 Segue abaixo o diagrama:
 
@@ -81,8 +81,6 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT [ "dotnet", "Review.Web.dll" ]
 ```
-
-## Fazendo o Deploy da Aplicação.
 
 Utilizaremos o docker-compose.yaml para que em apenas um unico comando possamos fazer a instalação da aplicação no container docker.
 
@@ -190,6 +188,17 @@ MONGO_PWD=mongopwd
 PG_USER=pguser
 PG_PASSWD=Pg@123
 ```
+
+## Fazendo o Deploy da Aplicação.
+
+Faça a clonagem do repositório da aplicação com o comando abaixo:
+
+```bash
+git clone https://github.com/edemirtoldo/rotten-potatoes-ms.git \
+	&& git clone https://github.com/edemirtoldo/movie.git \
+	&& git clone https://github.com/edemirtoldo/review.git
+```
+
 Acessar a pasta rotten-potatoes-ms e executar a linha de comando abaixo para fazer o build da aplicação e sua execução:
 
 ```bash
@@ -202,6 +211,9 @@ docker container ls
 ```
 Para acessar a aplicação basta acessar este Link: (http://localhost:8080)
 
+Pagina do Rotten-Potatoes-MS 
+
+![wordpress01](https://github.com/edemirtoldo/kubedev-desafio-docker/blob/main/img/wordpress01.png)
 
 Para a aplicação em execução:
 
