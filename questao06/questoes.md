@@ -203,7 +203,7 @@ git clone https://github.com/edemirtoldo/rotten-potatoes-ms.git \
 Acessar a pasta /rotten-potatoes-ms e executar a linha de comando abaixo para fazer o build da aplicação e sua execução:
 
 ```bash
-docker compose up -d
+docker-compose up -d
 ```
 apos o termino do Build e Deploy, para listar o container em execução:
 
